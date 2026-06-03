@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La Villa — A Villa in Puglia</title>
+  <meta name="description" content="Una villa indipendente recentemente ristrutturata a Fasano, Puglia. Due camere, veranda coperta, giardino privato." />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#030435" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+  <meta name="apple-mobile-web-app-title" content="A Villa in Puglia" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="A Villa in Puglia" />
+  <meta property="og:title" content="La Villa — A Villa in Puglia" />
+  <meta property="og:description" content="Una villa indipendente recentemente ristrutturata a Fasano, Puglia. Due camere, veranda coperta, giardino privato." />
+  <meta property="og:image" content="assets/hero-villa.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+<main class="villa-page">
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">A Villa <i>in Puglia</i></a>
+      <nav class="nav-links">
+        <a href="villa.html" class="active">La Villa</a>
+        <a href="camere.html">Camere</a>
+        <a href="galleria.html">Galleria</a>
+        <a href="il-territorio.html">Il territorio</a>
+        <a href="contatti.html">Contatti</a>
+      </nav>
+      <a class="nav-cta" href="contatti.html">Prenota</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Apri il menu" aria-controls="mobileMenu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-top">
+      <a class="brand" href="index.html">A Villa <i>in Puglia</i></a>
+      <button class="mobile-menu-close" id="menuClose" aria-label="Chiudi il menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-menu-links">
+      <a href="villa.html" class="active">La Villa</a>
+      <a href="camere.html">Camere</a>
+      <a href="galleria.html">Galleria</a>
+      <a href="il-territorio.html">Il territorio</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+    <a class="mobile-menu-cta" href="contatti.html">Prenota</a>
+    <div class="mobile-menu-contact">
+      <a href="tel:+393314509231">+39 331 450 9231</a>
+      <a href="mailto:laura.mc.francia@gmail.com">laura.mc.francia@gmail.com</a>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <!-- Video drone di sfondo: decorativo, autoplay/muted/loop/playsinline.
+         La sorgente (desktop/mobile) è scelta in base alla larghezza schermo.
+         poster = immagine di fallback se il video non parte (es. low-power iOS). -->
+    <video class="bg" id="heroVideo"
+           autoplay muted loop playsinline preload="metadata"
+           poster="assets/soggiorno.jpg" aria-hidden="true" tabindex="-1"
+           disablepictureinpicture disableremoteplayback>
+      <img class="hero-video-fallback" src="assets/soggiorno.jpg" alt="" />
+    </video>
+    <script>
+      (function () {
+        var v = document.getElementById('heroVideo');
+        if (!v) return;
+        // Caricamento condizionale: video mobile sotto i 768px, desktop sopra
+        var small = window.matchMedia('(max-width: 767px)').matches;
+        v.src = small ? 'assets/drone-villa-mobile.mp4' : 'assets/drone-villa-desktop.mp4';
+        // iOS Safari: muted + playsInline garantiscono l'autoplay
+        v.muted = true; v.setAttribute('muted', '');
+        v.playsInline = true;
+        var attempt = v.play();
+        if (attempt && typeof attempt.catch === 'function') {
+          attempt.catch(function () { /* autoplay bloccato: resta il poster */ });
+        }
+      })();
+    </script>
+    <div class="scrim"></div>
+    <div class="content">
+      <p class="eyebrow">La Villa</p>
+      <h1>Eleganza discreta, <br /><i>immersa negli ulivi.</i></h1>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="container grid-12 casa-grid">
+      <div class="col-5 casa-col">
+        <div class="casa-top">
+          <p class="eyebrow" style="margin-bottom:1.5rem">La casa</p>
+          <h2 class="display">Una villa indipendente, <br /><i>ristrutturata con cura.</i></h2>
+          <p class="body">Immersa nella quiete della campagna di Fasano, tra ulivi e giardini mediterranei, la villa è un rifugio indipendente pensato per chi desidera vivere la Puglia con tranquillità e autenticità. Gli interni, recentemente ristrutturati, accolgono fino a quattro ospiti in ambienti luminosi e confortevoli, mentre all'esterno una veranda arredata, un ampio giardino privato e una doccia all'aperto invitano a trascorrere le giornate tra relax e natura.</p>
+          <div class="stats">
+            <div class="stat"><div class="num">4</div><div class="eyebrow lab">Ospiti</div></div>
+            <div class="stat"><div class="num">2</div><div class="eyebrow lab">Camere</div></div>
+            <div class="stat"><div class="num">4.91</div><div class="eyebrow lab">Recensioni</div></div>
+          </div>
+        </div>
+        <div class="row-links" style="margin-top: 2rem">
+          <a href="camere.html">Vedi le camere →</a>
+        </div>
+      </div>
+      <div class="col-7 casa-col">
+        <div class="casa-top">
+          <img src="assets/villa-alternativa.jpeg" alt="La villa vista dal giardino" loading="lazy" class="reveal" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:var(--radius);" />
+        </div>
+        <div class="row-links" style="margin-top: 2rem">
+          <a href="galleria.html">Apri la galleria →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOGGIORNO & CUCINA -->
+  <section class="section tight">
+    <div class="container grid-12">
+      <div class="col-7">
+        <div class="villa-img-stack reveal-group">
+          <img src="assets/sala-pranzo.jpg" alt="Soggiorno" loading="lazy" class="reveal" />
+          <img src="assets/cucina.jpg" alt="Cucina" loading="lazy" class="reveal" />
+        </div>
+      </div>
+      <div class="col-5 villa-text">
+        <p class="eyebrow" style="margin-bottom:1.5rem">Spazi da vivere</p>
+        <h2 class="display">Soggiorno <br /><i>e cucina.</i></h2>
+        <p class="body">Il cuore della villa è uno spazio aperto che unisce soggiorno e sala da pranzo, con ampie vetrate che portano all'esterno. La cucina è completamente attrezzata — piano cottura, forno, lavastoviglie, frigorifero — ideale per chi ama cucinare con i prodotti del territorio.</p>
+        <ul class="villa-features">
+          <li><span class="dot"></span>Soggiorno open space</li>
+          <li><span class="dot"></span>Cucina completamente attrezzata</li>
+          <li><span class="dot"></span>Sala da pranzo interna</li>
+          <li><span class="dot"></span>Lavastoviglie e lavatrice</li>
+          <li><span class="dot"></span>Smart TV</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- LE CAMERE -->
+  <section class="section tight bg-secondary">
+    <div class="container grid-12">
+      <div class="col-5 villa-text">
+        <p class="eyebrow" style="margin-bottom:1.5rem">Zona Notte</p>
+        <h2 class="display">Camere da letto, <br /><i>e bagno.</i></h2>
+        <p class="body">La camera matrimoniale accoglie con un letto king size e un ambiente essenziale, luminoso e rilassante, affacciato sul verde esterno. La seconda camera dispone di due letti singoli, ideale per ospiti o bambini. Un bagno moderno con doccia walk-in serve entrambe le camere, fino a quattro ospiti in totale.</p>
+        <div class="row-links" style="margin-top: 2rem">
+          <a href="camere.html">Scopri le camere →</a>
+        </div>
+      </div>
+      <div class="col-7">
+        <img src="assets/camera-matrimoniale.png" alt="Camera matrimoniale" loading="lazy" class="reveal" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:var(--radius);" />
+      </div>
+    </div>
+  </section>
+
+  <!-- GLI ESTERNI -->
+  <section class="section tight bg-secondary">
+    <div class="container grid-12">
+      <div class="col-5 villa-text">
+        <p class="eyebrow" style="margin-bottom:1.5rem">All'aperto</p>
+        <h2 class="display">Il giardino <br /><i>e gli spazi esterni.</i></h2>
+        <p class="body">La veranda coperta è il salotto all'aperto della villa: un tavolo da pranzo, sedie a sdraio e la vista sugli ulivi secolari. Il giardino privato regala silenzio assoluto, mentre la doccia esterna è perfetta al rientro dal mare.</p>
+        <ul class="villa-features">
+          <li><span class="dot"></span>Veranda coperta con pranzo esterno</li>
+          <li><span class="dot"></span>Giardino privato</li>
+          <li><span class="dot"></span>Doccia esterna</li>
+          <li><span class="dot"></span>Vista uliveto secolare</li>
+          <li><span class="dot"></span>Parcheggio privato</li>
+        </ul>
+      </div>
+      <div class="col-7">
+        <div class="villa-img-stack reveal-group">
+          <img src="assets/veranda-pranzo.jpg" alt="Veranda coperta" loading="lazy" class="reveal" />
+          <img src="assets/doccia-esterna.jpg" alt="Doccia esterna" loading="lazy" class="reveal" style="object-position: 30% center;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight bg-secondary services-section">
+    <div class="container">
+      <div class="services-layout">
+        <div class="services-left">
+          <p class="eyebrow" style="margin-bottom:1.5rem">Servizi</p>
+          <h2 class="display">Il necessario, <br /><i>curato nei dettagli.</i></h2>
+        </div>
+
+        <div class="services-right">
+          <p>Ogni dotazione è pensata per un soggiorno fluido e silenzioso. Comfort contemporaneo nel rispetto del carattere autentico della casa.</p>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid var(--border); margin: 3.5rem 0;"></div>
+
+      <ul class="services-list">
+        <li>
+          <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M6 6l12 12M18 6L6 18"/></svg></span>
+          Aria condizionata
+        </li>
+        <li>
+          <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></span>
+          Wi-Fi ad alta velocità
+        </li>
+        <li>
+          <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+          Parcheggio privato
+        </li>
+        <li>
+          <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h18v5H3zM3 7l2 14h14l2-14"/><line x1="9" y1="12" x2="15" y2="12"/></svg></span>
+          Cucina attrezzata
+        </li>
+        <li>
+          <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+          Veranda coperta
+        </li>
+        <li>
+          <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M5.2 11C3.8 12.4 3 14.3 3 16.4 3 20 7 22 12 22s9-2 9-5.6c0-2.1-.8-4-2.2-5.4"/><path d="M12 8c-3.3 0-6 2.2-6 5.6"/></svg></span>
+          Doccia esterna
+        </li>
+        <li>
+          <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M12 12C12 7 7 4 7 4s0 5 5 8"/><path d="M12 12c0-5 5-8 5-8s0 5-5 8"/></svg></span>
+          Giardino privato
+        </li>
+        <li>
+          <span class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/></svg></span>
+          Dotazioni per bambini
+        </li>
+      </ul>
+
+      <div style="border-top: 1px solid var(--border); margin: 3.5rem 0;"></div>
+    </div>
+  </section>
+
+  <section class="cta-band bg-primary cta-image cta-olive">
+    <div class="cta-scrim"></div>
+    <div class="cta-content">
+      <h2>Prenota il tuo <i>rifugio in Puglia.</i></h2>
+      <a class="btn-cta" href="contatti.html">Richiedi disponibilità</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <p class="title">A Villa in Puglia</p>
+        <p style="margin-top:0.5rem">c.da Salamina, Snc<br />72015 Pezze di Greco BR — Puglia</p>
+      </div>
+      <div class="center">
+        <a href="villa.html">La Villa</a>
+        <a href="camere.html">Camere</a>
+        <a href="galleria.html">Galleria</a>
+        <a href="il-territorio.html">Il territorio</a>
+        <a href="contatti.html">Contatti</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+      <div class="right">
+        <p>laura.mc.francia@gmail.com</p>
+        <p style="margin-top:0.25rem">+39 331 450 9231</p>
+        <p class="small">© <span id="yr"></span> Tutti i diritti riservati</p>
+      </div>
+    </div>
+  </footer>
+
+</main>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // ---------- REVEAL ALLO SCROLL ----------
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (el) { obs.observe(el); });
+  })();
+</script>
+<script src="menu.js"></script>
+<script src="i18n.js"></script>
+</body>
+</html>

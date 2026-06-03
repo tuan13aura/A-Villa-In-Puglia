@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pagina non trovata — A Villa in Puglia</title>
+  <meta name="description" content="La pagina che cercavi non è disponibile. Torna alla home di A Villa in Puglia." />
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#030435" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+  <meta name="apple-mobile-web-app-title" content="A Villa in Puglia" />
+  <style>
+    .nf-wrap {
+      min-height: 70vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 6rem 1.5rem;
+    }
+    .nf-wrap h1 {
+      font-family: var(--font-display); font-weight: 500;
+      font-size: clamp(2.5rem, 6vw, 4.5rem); color: var(--primary); line-height: 1.05;
+    }
+    .nf-wrap h1 i { font-style: italic; }
+    .nf-wrap p { margin-top: 1.5rem; color: var(--muted-foreground); max-width: 32rem; }
+  </style>
+</head>
+<body>
+<main>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">A Villa <i>in Puglia</i></a>
+      <nav class="nav-links">
+        <a href="villa.html">La Villa</a>
+        <a href="camere.html">Camere</a>
+        <a href="galleria.html">Galleria</a>
+        <a href="il-territorio.html">Il territorio</a>
+        <a href="contatti.html">Contatti</a>
+      </nav>
+      <a class="nav-cta" href="contatti.html">Prenota</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Apri il menu" aria-controls="mobileMenu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-top">
+      <a class="brand" href="index.html">A Villa <i>in Puglia</i></a>
+      <button class="mobile-menu-close" id="menuClose" aria-label="Chiudi il menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-menu-links">
+      <a href="villa.html">La Villa</a>
+      <a href="camere.html">Camere</a>
+      <a href="galleria.html">Galleria</a>
+      <a href="il-territorio.html">Il territorio</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+    <a class="mobile-menu-cta" href="contatti.html">Prenota</a>
+    <div class="mobile-menu-contact">
+      <a href="tel:+393314509231">+39 331 450 9231</a>
+      <a href="mailto:laura.mc.francia@gmail.com">laura.mc.francia@gmail.com</a>
+    </div>
+  </div>
+
+  <div class="nf-wrap">
+    <p class="eyebrow" style="margin-bottom:1.5rem">Errore 404</p>
+    <h1>Pagina <i>non trovata.</i></h1>
+    <p>La pagina che cercavi non esiste o è stata spostata. Torna alla home e riprova da lì.</p>
+    <a class="inline-link" href="index.html" style="color:var(--primary)">Torna alla home</a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <p class="title">A Villa in Puglia</p>
+        <p style="margin-top:0.5rem">c.da Salamina, Snc<br />72015 Pezze di Greco BR — Puglia</p>
+      </div>
+      <div class="center">
+        <a href="villa.html">La Villa</a>
+        <a href="camere.html">Camere</a>
+        <a href="galleria.html">Galleria</a>
+        <a href="il-territorio.html">Il territorio</a>
+        <a href="contatti.html">Contatti</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+      <div class="right">
+        <p>laura.mc.francia@gmail.com</p>
+        <p style="margin-top:0.25rem">+39 331 450 9231</p>
+        <p class="small">© <span id="yr"></span> Tutti i diritti riservati</p>
+      </div>
+    </div>
+  </footer>
+
+</main>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script src="menu.js"></script>
+<script src="i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Villa in Puglia — Rifugio di Lusso in Puglia</title>
+  <meta name="description" content="Villa indipendente di lusso a Fasano, Puglia. Ulivi secolari, vista sull'Adriatico, giardino privato. Fino a 4 ospiti." />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#030435" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+  <meta name="apple-mobile-web-app-title" content="A Villa in Puglia" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="A Villa in Puglia" />
+  <meta property="og:title" content="A Villa in Puglia — Rifugio di Lusso in Puglia" />
+  <meta property="og:description" content="Villa indipendente di lusso a Fasano, Puglia. Ulivi secolari, vista sull'Adriatico, giardino privato. Fino a 4 ospiti." />
+  <meta property="og:image" content="assets/villa-homepage.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+<main class="homepage">
+
+  <!-- NAV (transparent over hero) -->
+  <header class="nav transparent" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">A Villa <i>in Puglia</i></a>
+      <nav class="nav-links">
+        <a href="villa.html">La Villa</a>
+        <a href="camere.html">Camere</a>
+        <a href="galleria.html">Galleria</a>
+        <a href="il-territorio.html">Il territorio</a>
+        <a href="contatti.html">Contatti</a>
+      </nav>
+      <a class="nav-cta" href="contatti.html">Prenota</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Apri il menu" aria-controls="mobileMenu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-top">
+      <a class="brand" href="index.html">A Villa <i>in Puglia</i></a>
+      <button class="mobile-menu-close" id="menuClose" aria-label="Chiudi il menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-menu-links">
+      <a href="villa.html">La Villa</a>
+      <a href="camere.html">Camere</a>
+      <a href="galleria.html">Galleria</a>
+      <a href="il-territorio.html">Il territorio</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+    <a class="mobile-menu-cta" href="contatti.html">Prenota</a>
+    <div class="mobile-menu-contact">
+      <a href="tel:+393314509231">+39 331 450 9231</a>
+      <a href="mailto:laura.mc.francia@gmail.com">laura.mc.francia@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="bg" src="assets/villa-homepage.jpeg" alt="La villa con giardino e vialetto in pietra" />
+    <div class="scrim"></div>
+    <div class="content">
+      <p class="eyebrow">Fasano · Puglia</p>
+      <h1>Tra natura <br /><i>e comfort.</i></h1>
+      <p class="lead">Un equilibrio perfetto tra architettura contemporanea</br> e paesaggio pugliese.</p>
+      <a class="thin-link" href="villa.html">Scopri la villa</a>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="container grid-12">
+      <div class="col-5">
+        <p class="eyebrow" style="margin-bottom:1.5rem">Benvenuti</p>
+        <h2 class="display" style="font-size: clamp(1.55rem, 4.6vw, 2.4rem)">Una residenza esclusiva, <br /><i>nel verde della Puglia.</i></h2>
+        <p class="body">A Villa in Puglia è una casa indipendente recentemente ristrutturata, pensata per chi cerca silenzio, eleganza e la luce piena della Puglia.</p>
+        <a class="inline-link" href="villa.html">La villa</a>
+      </div>
+      <div class="col-7">
+        <div class="two-img-grid reveal-group">
+          <img class="reveal" src="assets/villa-esterno.jpg" alt="La villa vista dall'esterno al tramonto" loading="lazy" />
+          <img class="reveal" src="assets/benvenuti-camera.png" alt="Camera da letto della villa" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAROUSEL -->
+  <section class="carousel-section">
+    <div class="container" style="padding-bottom: 2rem">
+      <p class="eyebrow" style="text-align:center; margin-bottom:1.5rem">Uno sguardo</p>
+      <h2 class="display" style="text-align:center; max-width:36rem; margin:0 auto">La villa, <i>in quattro istanti.</i></h2>
+    </div>
+
+    <div class="marquee" id="marquee" aria-roledescription="carousel">
+      <div class="marquee-viewport" id="marqueeViewport">
+        <div class="marquee-track" id="marqueeTrack">
+          <figure class="m-card"><img src="assets/carousel-01.jpg" alt="La villa vista dall'esterno" /></figure>
+          <figure class="m-card"><img src="assets/carousel-02.jpg" alt="Dettaglio della villa" /></figure>
+          <figure class="m-card"><img src="assets/carousel-03.jpg" alt="Veranda e spazi esterni" /></figure>
+          <figure class="m-card"><img src="assets/carousel-04.jpg" alt="Angolo della villa al tramonto" /></figure>
+        </div>
+      </div>
+
+      <button class="marquee-arrow prev" id="mqPrev" aria-label="Scorri indietro">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="15,18 9,12 15,6" />
+        </svg>
+      </button>
+      <button class="marquee-arrow next" id="mqNext" aria-label="Scorri avanti">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="9,6 15,12 9,18" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="container" style="text-align:center">
+      <a class="inline-link" href="galleria.html">Apri la galleria</a>
+    </div>
+  </section>
+
+  <!-- DISCOVER -->
+  <section class="section bg-secondary">
+    <div class="container">
+      <p class="eyebrow" style="margin-bottom:1.5rem">Esplora</p>
+      <h2 class="display" style="max-width:40rem">Tra gli spazi della villa </br><i>e la bellezza della Puglia.</i></h2>
+      <div class="cards">
+        <a class="card" href="camere.html">
+          <div class="img-wrap"><img src="assets/camera-ampia.png" alt="Le Camere" loading="lazy" /></div>
+          <h3>Le Camere</h3>
+          <p>Due camere luminose con dettagli artigianali.</p>
+          <span class="arrow">Scopri</span>
+        </a>
+        <a class="card" href="galleria.html">
+          <div class="img-wrap"><img src="assets/galleria-dettaglio.png" alt="Galleria" loading="lazy" /></div>
+          <h3>Galleria</h3>
+          <p>Ogni angolo della villa, in immagini.</p>
+          <span class="arrow">Scopri</span>
+        </a>
+        <a class="card" href="il-territorio.html">
+          <div class="img-wrap"><img src="assets/esperienze-costa.png" alt="Il territorio" loading="lazy" /></div>
+          <h3>Il Territorio</h3>
+          <p>Trulli, mare e antichi scavi a portata di mano.</p>
+          <span class="arrow">Scopri</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band bg-primary cta-image">
+    <div class="cta-scrim"></div>
+    <div class="cta-content">
+      <h2>Soggiorna tra ulivi <i>e mare Adriatico.</i></h2>
+      <a class="btn-cta" href="contatti.html">Prenota il tuo soggiorno</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <p class="title">A Villa in Puglia</p>
+        <p style="margin-top:0.5rem">c.da Salamina, Snc<br />72015 Pezze di Greco BR — Puglia</p>
+      </div>
+      <div class="center">
+        <a href="villa.html">La Villa</a>
+        <a href="camere.html">Camere</a>
+        <a href="galleria.html">Galleria</a>
+        <a href="il-territorio.html">Il territorio</a>
+        <a href="contatti.html">Contatti</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+      <div class="right">
+        <p>laura.mc.francia@gmail.com</p>
+        <p style="margin-top:0.25rem">+39 331 450 9231</p>
+        <p class="small">© <span id="yr"></span> Tutti i diritti riservati</p>
+      </div>
+    </div>
+  </footer>
+
+</main>
+<script>
+  // Transparent nav scroll behaviour
+  (function () {
+    var nav = document.getElementById('nav');
+    if (!nav || !nav.classList.contains('transparent')) return;
+    var onScroll = function () {
+      if (window.scrollY > 40) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // ---------- TYPEWRITER HEADING ----------
+  (function () {
+    var el = document.getElementById('twTyped');
+    if (!el) return;
+    var text = 'in quattro istanti.';
+    var started = false;
+
+    function type() {
+      if (started) return;
+      started = true;
+      var i = 0;
+      el.textContent = '';
+      el.classList.add('tw-active');
+      var interval = setInterval(function () {
+        if (i < text.length) {
+          el.textContent += text.charAt(i);
+          i++;
+        } else {
+          clearInterval(interval);
+          el.classList.remove('tw-active');
+          el.classList.add('tw-done');
+        }
+      }, 55);
+    }
+
+    if (!('IntersectionObserver' in window)) { el.textContent = text; return; }
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { type(); obs.unobserve(entry.target); }
+      });
+    }, { threshold: 0.5 });
+    obs.observe(document.getElementById('typewriterHeading'));
+  })();
+
+  // ---------- REVEAL ALLO SCROLL ----------
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+    els.forEach(function (el) { obs.observe(el); });
+  })();
+
+  // ---------- MARQUEE CAROUSEL (scorrimento continuo) ----------
+  (function () {
+    var track = document.getElementById('marqueeTrack');
+    if (!track) return;
+    var viewport = document.getElementById('marqueeViewport');
+    var marquee = document.getElementById('marquee');
+    var prev = document.getElementById('mqPrev');
+    var next = document.getElementById('mqNext');
+
+    // Duplica le card per un loop continuo e senza stacchi
+    var originals = Array.prototype.slice.call(track.children);
+    originals.forEach(function (node) { track.appendChild(node.cloneNode(true)); });
+
+    var offset = 0;          // px, sempre <= 0
+    var speed = 0.35;        // px per frame (~21px/s) — scorrimento lento
+    var paused = false;
+    var setWidth = 0;        // larghezza di una sequenza originale
+
+    function measure() {
+      // larghezza totale meno il duplicato = metà
+      setWidth = track.scrollWidth / 2;
+    }
+    measure();
+    window.addEventListener('resize', measure);
+
+    function normalize() {
+      if (setWidth <= 0) return;
+      while (offset <= -setWidth) offset += setWidth;
+      while (offset > 0) offset -= setWidth;
+    }
+
+    function frame() {
+      if (!paused) {
+        offset -= speed;
+        normalize();
+        track.style.transform = 'translateX(' + offset + 'px)';
+      }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+
+    // pausa su hover
+    marquee.addEventListener('mouseenter', function () { paused = true; });
+    marquee.addEventListener('mouseleave', function () { paused = false; });
+
+    // step manuale di una card
+    function cardStep() {
+      var card = track.querySelector('.m-card');
+      if (!card) return 320;
+      var style = getComputedStyle(track);
+      var gap = parseFloat(style.columnGap || style.gap || '0') || 0;
+      return card.getBoundingClientRect().width + gap;
+    }
+    function nudge(dir) {
+      track.style.transition = 'transform 600ms cubic-bezier(0.22, 1, 0.36, 1)';
+      offset -= dir * cardStep();
+      normalize();
+      track.style.transform = 'translateX(' + offset + 'px)';
+      window.setTimeout(function () { track.style.transition = 'none'; }, 620);
+    }
+    next.addEventListener('click', function () { nudge(1); });
+    prev.addEventListener('click', function () { nudge(-1); });
+  })();
+
+</script>
+<script src="menu.js"></script>
+<script src="i18n.js"></script>
+</body>
+</html>

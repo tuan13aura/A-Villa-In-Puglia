@@ -1,0 +1,11 @@
+# Cartelle pesanti NON necessarie alla pubblicazione del sito
+# (backup delle foto originali ~74 MB e foto sorgente WhatsApp/Unsplash ~96 MB)
+assets-originali/
+uploads/
+
+# File di sistema / dipendenze / log
+.DS_Store
+Thumbs.db
+.thumbnail
+node_modules/
+*.log

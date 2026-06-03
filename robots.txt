@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Aggiungi qui l'URL della sitemap dopo aver pubblicato il sito sul tuo dominio:
+# Sitemap: https://www.iltuodominio.it/sitemap.xml
