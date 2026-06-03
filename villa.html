@@ -6,6 +6,8 @@
   <title>La Villa — A Villa in Puglia</title>
   <meta name="description" content="Una villa indipendente recentemente ristrutturata a Fasano, Puglia. Due camere, veranda coperta, giardino privato." />
   <link rel="stylesheet" href="styles.css" />
+  <!-- Precarica il 1° fotogramma del video (poster della hero) per mostrarlo subito -->
+  <link rel="preload" as="image" href="assets/drone-villa-poster.jpg" />
   <meta name="theme-color" content="#030435" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="favicon.svg" />
@@ -67,9 +69,9 @@
          poster = immagine di fallback se il video non parte (es. low-power iOS). -->
     <video class="bg" id="heroVideo"
            autoplay muted loop playsinline preload="metadata"
-           poster="assets/soggiorno.jpg" aria-hidden="true" tabindex="-1"
+           poster="assets/drone-villa-poster.jpg" aria-hidden="true" tabindex="-1"
            disablepictureinpicture disableremoteplayback>
-      <img class="hero-video-fallback" src="assets/soggiorno.jpg" alt="" />
+      <img class="hero-video-fallback" src="assets/drone-villa-poster.jpg" alt="" />
     </video>
     <script>
       (function () {
