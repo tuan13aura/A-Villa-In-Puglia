@@ -68,7 +68,7 @@
          La sorgente (desktop/mobile) è scelta in base alla larghezza schermo.
          poster = immagine di fallback se il video non parte (es. low-power iOS). -->
     <video class="bg" id="heroVideo"
-           autoplay muted loop playsinline preload="metadata"
+           autoplay muted loop playsinline webkit-playsinline preload="auto"
            poster="assets/drone-villa-poster.jpg" aria-hidden="true" tabindex="-1"
            disablepictureinpicture disableremoteplayback>
       <img class="hero-video-fallback" src="assets/drone-villa-poster.jpg" alt="" />
@@ -77,16 +77,28 @@
       (function () {
         var v = document.getElementById('heroVideo');
         if (!v) return;
+        // iOS Safari: muted DEVE essere impostato prima del play; playsinline obbligatorio
+        v.muted = true; v.defaultMuted = true; v.setAttribute('muted', '');
+        v.playsInline = true; v.setAttribute('playsinline', ''); v.setAttribute('webkit-playsinline', '');
         // Caricamento condizionale: video mobile sotto i 768px, desktop sopra
         var small = window.matchMedia('(max-width: 767px)').matches;
         v.src = small ? 'assets/drone-villa-mobile.mp4' : 'assets/drone-villa-desktop.mp4';
-        // iOS Safari: muted + playsInline garantiscono l'autoplay
-        v.muted = true; v.setAttribute('muted', '');
-        v.playsInline = true;
-        var attempt = v.play();
-        if (attempt && typeof attempt.catch === 'function') {
-          attempt.catch(function () { /* autoplay bloccato: resta il poster */ });
+        v.load();
+        function tryPlay() {
+          var p = v.play();
+          if (p && typeof p.catch === 'function') p.catch(function () { /* riproverà sugli eventi sotto */ });
         }
+        tryPlay();
+        // Ritenta quando ci sono dati pronti (iOS spesso parte qui)
+        v.addEventListener('loadeddata', tryPlay, { once: true });
+        v.addEventListener('canplay', tryPlay, { once: true });
+        // Ultima rete di sicurezza: al primo tocco/scroll dell'utente (es. iOS Low Power Mode)
+        ['touchstart', 'pointerdown', 'scroll'].forEach(function (ev) {
+          window.addEventListener(ev, function on() {
+            tryPlay();
+            window.removeEventListener(ev, on);
+          }, { once: true, passive: true });
+        });
       })();
     </script>
     <div class="scrim"></div>

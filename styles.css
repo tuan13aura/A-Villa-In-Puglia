@@ -891,3 +891,17 @@ html.menu-open, html.menu-open body { overflow: hidden; }
 }
 /* Lo scrim (overlay scuro esistente) resta sopra al video per la leggibilità */
 .page-hero .scrim { z-index: 1; }
+
+/* ---------- CAROSELLO HOME su MOBILE ---------- */
+/* Le card su desktop sono 480px; su mobile sarebbero più larghe dello
+   schermo (si vedrebbe mezza foto + mezza un'altra). Qui le adattiamo
+   alla larghezza dello schermo così ogni foto si vede intera, con un
+   piccolo accenno della successiva. */
+@media (max-width: 767px) {
+  .marquee-track { gap: 1rem; padding: 0 1rem; }
+  .marquee .m-card {
+    width: 82vw;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+}
