@@ -106,7 +106,7 @@
     "Letto king-size 180×200": "King-size bed 180×200",
     "Armadio capiente": "Spacious wardrobe",
     "Vista uliveto": "Olive grove view",
-    "Biancheria in lino": "Linen bed sheets",
+    "Coperte in cotone": "Cotton blankets",
     "Camera 02": "Room 02",
     "Camera Doppia": "Twin Room",
     "Eleganza e relax": "Elegance and relaxation",
